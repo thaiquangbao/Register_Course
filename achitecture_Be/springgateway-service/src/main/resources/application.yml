@@ -1,0 +1,30 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: COURSE-SERVICE
+          uri: http://localhost:9000
+          predicates:
+            - Path=/api/**
+          filters:
+            - AuthFilter
+        - id: AUTH-SERVICE
+          uri: http://localhost:9001
+          predicates:
+            - Path=/auth/**
+          filters:
+            - AuthFilter
+        - id: REGISTER-SERVICE
+          uri: http://localhost:9004
+          predicates:
+            - Path=/register/**
+          filters:
+            - AuthFilter
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"

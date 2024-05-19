@@ -1,0 +1,71 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsla(187, 81%, 69%, 0.959);
+  --gradientColorBg: linear-gradient(
+    to bottom,
+    hsl(187, 85%, 43%),
+    hsl(199, 87%, 56%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDream: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
+  --carHover: rgb(255, 255, 255);
+}
+.backGroundLogin {
+  .loginImg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .successForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    color: rgb(6, 253, 6);
+  }
+  .errorForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+  }
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f2f2e7;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    float: left;
+    left: 100px;
+    top: 200px;
+    width: 400px;
+    height: 300px;
+    .header-login-form {
+      text-align: center;
+    }
+    .checkBox {
+      align-self: flex-end;
+      margin-bottom: 15px;
+    }
+    .textField {
+      width: 400px;
+      margin-bottom: 15px;
+    }
+  }
+}

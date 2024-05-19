@@ -1,0 +1,85 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsla(187, 81%, 69%, 0.959);
+  --gradientColorBg: linear-gradient(to bottom,
+      hsla(186, 64%, 85%, 0.842),
+      hsla(186, 61%, 69%, 0.842),
+      hsl(199, 68%, 61%));
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDream: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
+  --carHover: rgb(255, 255, 255);
+}
+
+.registerChild {
+  /* background-color: blue; */
+  display: flex;
+  flex: 0.8;
+  flex-direction: column;
+  align-items: center;
+
+  .header {
+    .title-web {
+      font-size: 20px;
+    }
+  }
+
+  .header-select-box {
+    /* text-align: center; */
+    width: 300px;
+    margin-bottom: 10px;
+  }
+
+  .danhSachMonHoc {
+    border: 1px solid var(--cardBG); // Sử dụng biến CSS cho màu viền
+    border-radius: 5px; // Bo tròn góc
+    width: 100%; // Chiều rộng tối đa
+    height: 600px; // Chiều cao cố định
+    overflow: scroll; // Cho phép cuộn nội dung
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Thêm bóng đổ nhẹ
+    padding: 1px; // Khoảng cách đệm bên trong để nội dung không dính sát vào viền
+    background-color: #fff; // Màu nền trắng cho khung
+    transition: box-shadow 0.3s ease-in-out;
+
+    .header-list-course {
+      text-align: center;
+    }
+
+    .table-course {
+      width: 100%; // Chiều rộng bảng
+      border-collapse: collapse; // Loại bỏ khoảng cách giữa các border
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Thêm bóng đổ cho bảng
+      text-align: left; // Căn lề trái cho text
+
+      th,
+      td {
+        padding: 12px 15px; // Khoảng cách padding cho mỗi ô
+        border-bottom: 1px solid #ddd; // Đường kẻ ngang mỗi hàng
+      }
+
+      th {
+        background-color: #f4f4f4; // Màu nền cho header
+        color: #333; // Màu chữ cho header
+        font-size: 16px; // Kích thước chữ cho header
+      }
+
+      tr:hover {
+        background-color: #f9f9f9; // Màu nền khi hover vào hàng
+      }
+
+      .course-component {
+        cursor: pointer; // Con trỏ chuột biến thành pointer khi hover
+        transition: background-color 0.3s; // Hiệu ứng chuyển màu khi hover
+
+        &:hover {
+          background-color: #e2e2e2; // Thay đổi màu nền khi hover
+        }
+      }
+    }
+  }
+}

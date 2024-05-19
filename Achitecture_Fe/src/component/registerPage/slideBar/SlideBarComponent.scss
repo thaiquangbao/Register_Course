@@ -1,0 +1,53 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsla(187, 81%, 69%, 0.959);
+  --gradientColorBg: linear-gradient(to bottom,
+      hsla(186, 64%, 85%, 0.842),
+      hsla(186, 61%, 69%, 0.842),
+      hsl(199, 58%, 55%));
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDream: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
+  --carHover: rgb(255, 255, 255);
+}
+
+.sidebar {
+  background: var(--gradientColorBg);
+  display: flex;
+  flex: 0.2;
+  flex-direction: column;
+  border-radius: 5px;
+
+  .option-change-page {
+    padding-top: 5px;
+    width: 300px;
+    margin-left: 15px;
+  }
+
+  .first-sections {
+    text-align: center;
+
+    .img-avt {
+      margin-top: 30px;
+      margin-right: 30px;
+      border-radius: 100px;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .info {
+    margin-top: 40px;
+
+    .txt-info {
+      font-size: 14px;
+      font-weight: bold;
+      width: 350px;
+    }
+  }
+}
